@@ -13,14 +13,6 @@ Go 1.24
 Docker and Docker Compose
 Make
 
-### Project structure
-├── cmd/            # Application entrypoints
-├── internal/       # Private application code
-├── pkg/            # Public libraries
-├── Makefile        # Build automation
-└──docker-compose.yml # Container orchestration
-
-
 ## Running the service
 ```makefile
 # Build the application
