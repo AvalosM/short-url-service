@@ -16,16 +16,10 @@ Make
 ## Running the service
 ```makefile
 # Build the application
-make build
-
-# Run the service locally
-make run
+make all
 
 # Run tests
 make test
-
-# Run tests with coverage
-make test-coverage
 
 # Run linting
 make lint
@@ -33,19 +27,11 @@ make lint
 # Clean build artifacts
 make clean
 
-# Build Docker image
-make docker-build
-
-# Run the service in Docker
-make docker-run
 ```
 ## Using docker-compose
 ```bash
 # Start all services
 docker-compose up
-
-# Run in detached mode
-docker-compose up -d
 
 # Stop all services
 docker-compose down
