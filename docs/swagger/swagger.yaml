@@ -1,0 +1,159 @@
+definitions:
+  metrics.Metrics:
+    properties:
+      from:
+        type: string
+      shortURLId:
+        type: string
+      to:
+        type: string
+      uniqueVisits:
+        format: int64
+        type: integer
+      visits:
+        format: int64
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /private/v1/short-urls/{shortURLId}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a short URL by its id
+      parameters:
+      - description: Short URL id to be deleted
+        in: path
+        name: shortURLId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Short URL deleted successfully
+          schema:
+            type: string
+        "400":
+          description: Invalid short URL id
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+      summary: Delete a short URL
+      tags:
+      - short-url
+      - private
+  /private/v1/short-urls/{shortURLId}/metrics:
+    get:
+      consumes:
+      - application/json
+      description: Get metrics for a short URL within a specified time range
+      parameters:
+      - description: Short URL id to get metrics for
+        in: path
+        name: shortURLId
+        required: true
+        type: string
+      - description: Start time for metrics (RFC3339 format)
+        in: query
+        name: from
+        required: true
+        type: string
+      - description: End time for metrics (RFC3339 format)
+        in: query
+        name: to
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Short URL metrics
+          schema:
+            $ref: '#/definitions/metrics.Metrics'
+        "400":
+          description: Invalid request parameters
+          schema:
+            type: string
+        "404":
+          description: Metrics not found
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+      summary: Get short URL metrics
+      tags:
+      - short-url
+      - private
+  /private/v1/short-urls/create:
+    post:
+      consumes:
+      - application/json
+      description: Create a short URL for the given long URL
+      parameters:
+      - description: Long URL to be shortened
+        in: body
+        name: ShortURLRequest
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Short URL id
+          schema:
+            type: string
+        "400":
+          description: Invalid long URL
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+      summary: Create a short URL
+      tags:
+      - short-url
+      - private
+  /public/v1/short-urls/{shortURLId}:
+    get:
+      consumes:
+      - application/json
+      description: Redirect to the long URL for the given short URL id
+      parameters:
+      - description: Long URL to be shortened
+        in: query
+        name: longURL
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "302":
+          description: Short URL ID
+          schema:
+            type: string
+        "400":
+          description: Invalid long URL
+          schema:
+            type: string
+        "404":
+          description: Short URL not found
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            type: string
+      summary: Redirect to long URL
+      tags:
+      - short-url
+      - public
+swagger: "2.0"
