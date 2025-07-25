@@ -14,7 +14,7 @@ import (
 	reflect "reflect"
 	time "time"
 
-	metrics "github.com/AvalosM/meli-interview-challenge/pkg/metrics"
+	metrics "github.com/AvalosM/short-url-service/pkg/metrics"
 	gomock "go.uber.org/mock/gomock"
 )
 

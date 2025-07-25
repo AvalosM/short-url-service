@@ -9,8 +9,8 @@ import (
 	"github.com/stretchr/testify/suite"
 	"go.uber.org/mock/gomock"
 
-	"github.com/AvalosM/meli-interview-challenge/pkg/shorturl"
-	"github.com/AvalosM/meli-interview-challenge/pkg/shorturl/mocks"
+	"github.com/AvalosM/short-url-service/pkg/shorturl"
+	"github.com/AvalosM/short-url-service/pkg/shorturl/mocks"
 )
 
 //go:generate mockgen -typed -package=mocks  -source=./manager.go -destination=./mocks/mocks.go

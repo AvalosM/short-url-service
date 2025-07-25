@@ -8,14 +8,14 @@ import (
 	"os"
 	"time"
 
-	"github.com/AvalosM/meli-interview-challenge/internal/cache"
-	"github.com/AvalosM/meli-interview-challenge/internal/config"
-	"github.com/AvalosM/meli-interview-challenge/internal/handlers"
-	"github.com/AvalosM/meli-interview-challenge/internal/router"
-	"github.com/AvalosM/meli-interview-challenge/internal/storage"
-	"github.com/AvalosM/meli-interview-challenge/pkg/logging"
-	"github.com/AvalosM/meli-interview-challenge/pkg/metrics"
-	"github.com/AvalosM/meli-interview-challenge/pkg/shorturl"
+	"github.com/AvalosM/short-url-service/internal/cache"
+	"github.com/AvalosM/short-url-service/internal/config"
+	"github.com/AvalosM/short-url-service/internal/handlers"
+	"github.com/AvalosM/short-url-service/internal/router"
+	"github.com/AvalosM/short-url-service/internal/storage"
+	"github.com/AvalosM/short-url-service/pkg/logging"
+	"github.com/AvalosM/short-url-service/pkg/metrics"
+	"github.com/AvalosM/short-url-service/pkg/shorturl"
 )
 
 func main() {

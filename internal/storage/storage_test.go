@@ -10,8 +10,8 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/AvalosM/meli-interview-challenge/internal/storage"
-	"github.com/AvalosM/meli-interview-challenge/pkg/metrics"
+	"github.com/AvalosM/short-url-service/internal/storage"
+	"github.com/AvalosM/short-url-service/pkg/metrics"
 )
 
 type StorageSuite struct {

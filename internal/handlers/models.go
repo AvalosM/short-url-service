@@ -3,7 +3,7 @@ package handlers
 import (
 	"time"
 
-	"github.com/AvalosM/meli-interview-challenge/pkg/metrics"
+	"github.com/AvalosM/short-url-service/pkg/metrics"
 )
 
 // ShortURLRequest ...

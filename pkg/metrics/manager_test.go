@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AvalosM/meli-interview-challenge/pkg/logging"
-	"github.com/AvalosM/meli-interview-challenge/pkg/metrics"
-	"github.com/AvalosM/meli-interview-challenge/pkg/metrics/mocks"
+	"github.com/AvalosM/short-url-service/pkg/logging"
+	"github.com/AvalosM/short-url-service/pkg/metrics"
+	"github.com/AvalosM/short-url-service/pkg/metrics/mocks"
 	"github.com/stretchr/testify/suite"
 	"go.uber.org/mock/gomock"
 )

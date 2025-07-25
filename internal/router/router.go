@@ -7,7 +7,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	httpSwagger "github.com/swaggo/http-swagger"
 
-	"github.com/AvalosM/meli-interview-challenge/internal/handlers"
+	"github.com/AvalosM/short-url-service/internal/handlers"
 )
 
 func NewRouter(config *Config, shortURLHandler *handlers.ShortURLHandler) http.Handler {

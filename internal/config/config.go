@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/AvalosM/meli-interview-challenge/internal/cache"
-	"github.com/AvalosM/meli-interview-challenge/internal/router"
-	"github.com/AvalosM/meli-interview-challenge/internal/storage"
-	"github.com/AvalosM/meli-interview-challenge/pkg/metrics"
-	"github.com/AvalosM/meli-interview-challenge/pkg/shorturl"
+	"github.com/AvalosM/short-url-service/internal/cache"
+	"github.com/AvalosM/short-url-service/internal/router"
+	"github.com/AvalosM/short-url-service/internal/storage"
+	"github.com/AvalosM/short-url-service/pkg/metrics"
+	"github.com/AvalosM/short-url-service/pkg/shorturl"
 )
 
 // Config holds the configuration for the application

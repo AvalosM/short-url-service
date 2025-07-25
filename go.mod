@@ -1,4 +1,4 @@
-module github.com/AvalosM/meli-interview-challenge
+module github.com/AvalosM/short-url-service
 
 go 1.24
 

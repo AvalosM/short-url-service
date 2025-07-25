@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AvalosM/meli-interview-challenge/pkg/logging"
+	"github.com/AvalosM/short-url-service/pkg/logging"
 )
 
 const (

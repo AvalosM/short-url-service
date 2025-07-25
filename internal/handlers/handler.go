@@ -9,9 +9,9 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"github.com/AvalosM/meli-interview-challenge/pkg/logging"
-	"github.com/AvalosM/meli-interview-challenge/pkg/metrics"
-	"github.com/AvalosM/meli-interview-challenge/pkg/shorturl"
+	"github.com/AvalosM/short-url-service/pkg/logging"
+	"github.com/AvalosM/short-url-service/pkg/metrics"
+	"github.com/AvalosM/short-url-service/pkg/shorturl"
 )
 
 // ShortURLManager short url manager
